@@ -15,7 +15,7 @@ I aimed to create a face or some sort of creature by using the elements on the p
   --border:20px var(--col02);
 }
 
-h1 {
+h1{
   color:rgb(255, 255, 255);
   
   text-align: center;
@@ -35,7 +35,7 @@ background-image: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(0, 0
 }
 
 #wrapper{
-    background-color: antiquewhite;
+    background-color:
     padding: 1em;
    
 
@@ -107,6 +107,8 @@ background-image: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(0, 0
     grid-area: A5; }
 
     /* I used a linear graident to create the look of a mouth to go with the whole aesthetic of the page, being a sort of robotic cyclops creature.*/
+    /* ultimately, I felt I was partially successful in implementing css styling to create a design within the webpage. I feel like I could be more successful in the excecution of my idea after further learning and improvement around my knowledge of coding.*/
+
   
   .A6 { 
     background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.521),rgb(0, 0, 0),rgb(255, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255), rgb(255, 255, 255),  rgb(255, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
@@ -115,7 +117,4 @@ background-image: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(0, 0
     border: var(--border);
     height: 200%;
     grid-area: A6; 
-  }
-
-    /* ultimately, I felt I was partially successful in implementing css styling to create a design within the webpage. I feel like I could be more successful in the excecution of my idea after further learning and improvement around my knowledge of coding.*/
-  
+  }  

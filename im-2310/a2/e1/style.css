@@ -1,0 +1,121 @@
+*{
+   box-sizing: border-box;
+   margin: 10;
+}
+/* my selected reference image was the 'Jesse Lonergan - Hedra - page 29.jpg' depicting a set of 5 offset rectangular boxes with a large rectangular box at the bottom.
+In terms of aesthetic, I did not really take any inspiration from the reference and tried to create my own look implementing only the layout and formatting.
+
+I aimed to create a face or some sort of creature by using the elements on the page as the facial features.*/
+
+:root{
+  --col01: rgb(255, 255, 255);
+  --col02: rgb(0, 0, 0);
+  --col03: rgb(255, 45, 45);
+  --col04: rgb(255, 255, 255);
+  --border:20px var(--col02);
+}
+
+h1 {
+  color:rgb(255, 255, 255);
+  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  padding: 20px;
+
+  margin: 25px 200px 75px 200px;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 200;
+background-color: rgb(0, 0, 0);
+text-align: center;
+background-image: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(0, 0, 0),rgb(0, 0, 0));
+}
+
+#wrapper{
+    background-color: antiquewhite;
+    padding: 1em;
+   
+
+   
+}
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px 15px;
+    width: 1480px;
+    height: 1050px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "A1 . A3 . A5"
+      "A1 A2 A3 A4 A5"
+      ". A2 . A4 ."
+      "A6 A6 A6 A6 A6"
+      "A6 A6 A6 A6 A6";
+  }
+  
+/* I implented a very symetrical contrasting colour scheme to my layout. My goal was to incorperate the use of raidal and regular gradients in order to create a design within the boxes and background. My aim was to create a sort of eye shape that the viewer is guided towards when viewing the page initially. I experimented with varius colour schemes howver i felt the bright reds and whites contrasting the black background evoked a sense of danger and abruptness.*/
+
+  .A1 { 
+    background-image: conic-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 255, 255), rgb(255, 0, 0), rgb(255, 255, 255),rgb(255, 0, 0));
+    border: inset 10px var(--col02);
+    background-color: var(--col01);
+    border: var(--border);
+    
+ 
+    /* I used a radial gradient with red as the primary colour and white streaks coming off it, to create a sort of neon luminescent light look.*/
+    
+    grid-area: A1; }
+  
+  .A2 { 
+    background-image: conic-gradient(rgb(255, 0, 0),rgb(255, 255, 255),rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 0, 0),rgb(255, 0, 0));
+    border: inset 10px var(--col02);
+    background-color: var(--col01);
+    border: var(--border);
+    
+
+    grid-area: A2; }
+  
+  .A3 { 
+    background-image: conic-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 0, 0),rgb(255, 0, 0));
+    border: inset 10px var(--col02);
+    background-color: var(--col01);
+    border: var(--border);
+   
+    
+
+    grid-area: A3; }
+  
+  .A4 { 
+    background-image: conic-gradient(rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0), rgb(255, 255, 255),rgb(255, 0, 0));
+    border: inset 10px var(--col02);
+    background-color: var(--col01);
+    border: var(--border);
+    
+  
+    grid-area: A4; }
+  
+  .A5 { 
+    background-image: conic-gradient(rgb(255, 0, 0),rgb(255, 255, 255),rgb(255, 0, 0), rgb(255, 255, 255), rgb(255, 0, 0),rgb(255, 0, 0));
+    border: inset 10px var(--col02);
+    background-color: var(--col01);
+    border: var(--border);
+    
+  
+    grid-area: A5; }
+
+    /* I used a linear graident to create the look of a mouth to go with the whole aesthetic of the page, being a sort of robotic cyclops creature.*/
+  
+  .A6 { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.521),rgb(0, 0, 0),rgb(255, 0, 0), rgb(255, 255, 255),rgb(255, 255, 255), rgb(255, 255, 255),  rgb(255, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
+    border: inset 20px var(--col02);
+    
+    border: var(--border);
+    height: 200%;
+    grid-area: A6; 
+  }
+
+    /* ultimately, I felt I was partially successful in implementing css styling to create a design within the webpage. I feel like I could be more successful in the excecution of my idea after further learning and improvement around my knowledge of coding.*/
+  

@@ -1,0 +1,168 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#000000;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+h1 {
+  color:rgb(0, 0, 0);
+  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  padding: 10px;
+  
+  
+}
+h2 {
+  color:rgb(0, 0, 0);
+  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+h3 {
+  color:rgb(0, 0, 0);
+  
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+  padding: 0px;
+  font-weight: normal;
+}
+  h4 {
+    color:rgb(0, 0, 0);
+    
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    padding: 0px;
+}
+h5 {
+  color:rgb(59, 12, 12);
+  
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    background-image:linear-gradient(rgb(255, 255, 255),rgb(110, 156, 255),rgb(255, 132, 132));
+    }
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+
+  
+}
+
+.FilterSection{
+
+}
+
+.FilterBox{
+
+}
+
+.FilterButton{
+border-style:hidden;
+color: #000
+}
+
+
+.SelectedFilter{
+  color: red;
+}
+
+.RecipeLink{
+
+}
+
+.RecipeName{
+
+}
+
+.Author{
+
+}
+
+.RecipeImageContainer{
+
+  }
+
+.RecipeImg{
+  size: 40%;
+  color: #000000;
+  border-radius: 30%;
+  border-style: initial;
+}
+
+.Attribution{
+
+}
+
+.Publisher{
+
+}
+
+.Cuisine{
+
+}
+
+.TimeToCook{
+
+}
+
+.SkillLevel{
+
+}
+
+.Course{
+
+}
+
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+}
+

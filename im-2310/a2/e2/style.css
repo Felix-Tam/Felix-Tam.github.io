@@ -1,14 +1,11 @@
-/* z-index order */
 
+/* I have brightened up the site, aswell as centered the site into a balanced symetrical form */
 *{
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
 }
-
-/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
-/* https://lospec.com/palette-list/1bit-monitor-glow */
-/* you're welcome to change the colours if you want or any of the other general page style */
+  /* Surrounding the indexing and filterring, I have sorted the catagories into the types of food, aswell as the ease of cooking the certain foods. */
 :root{
   --col-01:#222323;
   --col-02:#000000;
@@ -16,6 +13,8 @@
   --col-04:#b6e878;
   --border: 1px solid var(--col-02);
 }
+
+/* I have used a simple black and white contrasting colour scheme for the title type as this is the most legible and accessible */
 
 h1 {
   color:rgb(0, 0, 0);
@@ -25,7 +24,9 @@ h1 {
   font-size: 70px;
   padding: 10px;
   
-  
+  /* I decided to change the font to a more legible bold sans-serif type to improve accessibility */
+
+  /* I also condensed the linked Urls of each recipe into a simple 'Visit Website' instead of the actual link. This link is also now clickable. */
 }
 h2 {
   color:rgb(0, 0, 0);
@@ -72,10 +73,8 @@ body{
     background-image:linear-gradient(rgb(255, 255, 255),rgb(110, 156, 255),rgb(255, 132, 132));
     }
 
-/*
-  i've set up a basic flexbox for each recipe container - you might want to change some of the 
-  flex properties here on the container or on the individual flex items depending on how you want to style them
-*/
+    /* I have used a simple soft colour gradient from white to blue to pink to make the site a bit more interesting, aswell as make the user want to scroll up and down the page. */
+
 .RecipeBox{
 
   
@@ -98,6 +97,7 @@ color: #000
 .SelectedFilter{
   color: red;
 }
+/* I have used the colour red as the highlight colour when the user selects a specific tab as this gives the most legible feedback to the user on which tab they have selected.*/
 
 .RecipeLink{
 
@@ -121,6 +121,7 @@ color: #000
   border-radius: 30%;
   border-style: initial;
 }
+  /* I curved the edges on the images to reduce the harshness of their presentation, as recipe sites should evoke a sense of simplicity and ease. */
 
 .Attribution{
 

@@ -1,0 +1,316 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#ff0000;
+  --col-04:#e8788b;
+  font-size: 16px;
+
+/* I stuck to the use of black and white as the dominant shades as well as the colour red as the primary colour. I found red to be the best fit in relation to the functionality within the page as it maintains its legibility when shifting between light and dark modes. */
+
+  scroll-behavior:smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: 3s;
+}
+
+/* I chose to lengthen the transition between light and dark modes to 3 seconds as I found the gradial change to be more visually appealing compared to the instant harsh shift.*/
+
+nav ol li a {
+  color: var(--col-01);
+  text-decoration: none;
+  cursor:pointer;
+}
+
+/* I alterred the cursor to change to a pointer when hovering over clickable elements within the page to make clear to the user what is accessible */
+
+nav {
+  margin-top: 1rem;
+  width: 320px;
+  border-radius: 25px;
+}
+
+/* added simple colour fade animation effect when hovering over the navigation list elements to create further visual interest*/
+
+nav li:hover {
+  width: 320px;
+  color: #ff0000;
+  background-color: #ff6868;
+  border-radius: 25px;
+  animation-name: fade;
+  animation-duration: 8s;
+  
+}
+
+/* I added the :active tag to improve the feedback of clicking the individual index titles, as the border and background colour shift from red to purple when clicked on. */
+
+nav li:active{
+  background-color: rgb(39, 0, 148);
+  width: 320px;
+  color: rgb(90, 32, 145);
+  border-radius: 25px;
+  border-color: rgb(87, 0, 226);
+}
+
+/* I added borders using an outset border style to make it clear that these elements are selectable. I also added an animation when hovering over the individual sections that changes the colour of the number and background colour. This was done to make the page more accessible as well as create more visual interest. */
+
+nav li{
+  font-size: 1rem;
+  border-style:outset;
+  border-width: 8px;
+  border-color: #d30000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* I selected the arial, helvetica, sans-serif font family for the majority of the web page as I find it to the the most easily legible and minimal, therefore best when it comes to accessibility. */
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+h5{
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+audio{
+  display: hidden;
+}
+
+
+.SelectedFilter{
+  color: red;
+}
+
+h3{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+
+h2{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+h2:hover{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+
+}
+
+/* I made it so when the user hovers over sections of the text it is highlighted red. This may help certain individuals, making it simple to keep track of the section they are currently reading. */
+
+h4{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font: italic;
+
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  font-size: 20px;
+  border-style: dashed;
+  border-width: 2px;
+  background-color: #ff0000;
+}
+
+#mode-button:hover{
+  background-color: rgb(117, 0, 0);
+  color: red;
+  
+}
+
+#mode-button:active{
+  background-color: rgb(17, 0, 0);
+  color: rgb(90, 32, 145);
+}
+  
+/* I altered the light and dark mode toggle to have more direct feedback with a tactile hover animation and shift in colour, as well as dashed border style. */
+
+/* On another note, even though this will not add any marks and does not reflect what is required in the brief, I decided to add one of Hosono's songs, that will automatically play when you enter the page. I felt like this elevates the overall experience of viewing and exploring the page. This song is also toggleable and can be turned off if desired. */
+
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+#load-link{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 1;
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+/* I added a simple rounded border and hover colour fade animation to the opening page as this simply identifies the interaction while enticing the user to click. 
+
+Regarding the loading icon, I decided to change it to a simple circular spinning icon that is partiually offset to crate a sleek egg like shape that rotates clockwise. I feel like this shape fits well with the overall feel and aesthetic I am trying to achieve. */
+
+
+#load-link:hover{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: rgb(255, 0, 0);
+  animation-name: fade;
+  animation-duration: 8s;
+}
+
+@keyframes fade {
+  0%   {background-color: red;}
+  25%  {background-color: rgb(214, 87, 87);}
+  40%  {background-color: rgb(149, 138, 241);}
+  50% {background-color: rgb(141, 19, 255);}
+  70% {background-color: rgb(4, 0, 255);}
+ 100% {background-color: rgb(0, 153, 255);}
+}
+
+
+  #load-link:active{
+    line-height: 1rem;
+    background-color: transparent;
+    border: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(100, 16, 156);
+    background-color: rgb(168, 100, 168);
+    font-size: 15px;
+
+}
+/* throbber while page is fake loading */
+
+#load-throbber{
+  display: none;
+  border: 15px solid #d30000;
+  border-top: #ff5e5e;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; 
+  animation: spin 2s linear infinite;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}

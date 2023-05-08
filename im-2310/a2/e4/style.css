@@ -1,0 +1,177 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  
+  margin: 0;
+}
+
+:root{
+  --col-01:#fdceff;
+  --col-02:#c547ff;
+  --col-03:#a979df;
+  --col-04:#b6e878;
+  --col-05:#381555;
+  --col-06:#dcb7ff;
+  --col-07:#3756dd;
+  --border: 1px solid var(--col-02);
+}
+/* For the colour palate I chose to use various cool pastel colours, as these fit within the fun playful aesthetic I was trying to achieve, as well as reflect the content within the videos colour scheme. */
+
+.video-player-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
+.video-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#videoElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+   border-radius: 40px;
+  border-width: 30px;
+  border-style: double;
+  border-color: var(--col-03);
+}
+
+#videoPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+  display: none;
+}
+
+.video-controls-wrapper{
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  border-width: 20px;
+  border-style: double;
+  border-color: var(--col-03);
+
+/* I chose to use a double border style with a 30px border radius that created a soft rounded edge. the double border style makes the overall aesthetic more playful and works well with the cartoonish keyboard element I decided to add. */
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
+
+.video-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+}
+.video-control-button:hover{
+  background-color: var(--col-03);
+}
+.video-control-button:active{
+  background-color: var(--col-06);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+}
+
+.video-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-moz-progress-bar {
+  background-color: var(--col-02);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-webkit-progress-value {
+  background-color: var(--col-02);
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+/* for the overall aesthetic of the website, I wanted to create a soft and playful aesthetic to contrast the harshness of the shapes and forms presented within the video. I however aimed to follow a colour palate similar to what was in the video, using predominantly soft pastel pinks and purples.
+I used an image of a keyboard as the fuction button for my background colour change effect and added a double border style to the video player and timeline to make the page look as if it were a cartoon computer. */
+img{
+  width: 820px;
+  align-self: center;
+  width: 760px;
+}
+
+button{
+  padding: 0;
+border: none;
+background: none;
+align-self: center;
+}
+
+/* For the type, I chose a simple bolded style that clearly conveys its message to the reader with no confusion. */
+
+h1{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration:overline;
+  text-align: center;
+  font-size: medium;
+}
+
+h2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size:larger;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}
+
+/* I used the various included icons to be implemented into the video timeline. */
+
+  #muteButton {
+    background-image: url(./icons/mute.svg)
+  }
+  
+  #unmuteButton {
+    background-image: url(./icons/unmute.svg)
+  }
+  
+  #fullScreen {
+    background-image: url(./icons/fullScreen.svg)
+  }
+  
+  #fullScreen:hover {
+    background-image: url(./icons/fullScreenhover.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  }

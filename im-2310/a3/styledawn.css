@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background: rgba(0, 0, 0, .2);
+}
+
+body {
+    background: #000000;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.Title {
+    font-size: 3em;
+    color: #000000;
+    pointer-events: none;
+    margin-right: 270px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 4px 15px;
+    border-style:hidden;
+    border-radius: 10px;
+    margin: 0 40px;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #ffbb00;
+    color: rgb(0, 0, 0);
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    text-decoration:solid;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #000000;
+    padding: 100px;
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+h3{
+font-size: 35px;
+color: #fff;
+text-align: center;
+}
+
+h1{
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: animate 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes animate{
+        from{
+            text-shadow: 0 0 20px rgb(255, 255, 255);
+        }
+        to{text-shadow: 0 0 30px rgb(255, 255, 255),
+            0 0 10px rgb(255, 255, 255);
+        }
+    }
+
+h4{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    }
+
+audio{
+   margin-left: 510px;
+}
